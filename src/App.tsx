@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+/* boostrap imports */
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { Table } from "./shared/components/table/table";
+import { Button } from "./shared/components/button/button";
+import { ProgressBar } from "./shared/components/progress-bar/progress-bar";
+import { TodoModel } from "./shared/interface/todo.interface";
+import { Todo } from "./shared/data/todo-data";
 
 function App() {
+  const todo: TodoModel[] = Todo;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="heading-section">Welcome To Todo Application</div>
+      <div className="table-section">
+        <Table todo={todo}></Table>
+      </div>
     </div>
   );
 }

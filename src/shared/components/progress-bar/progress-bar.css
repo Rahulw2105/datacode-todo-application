@@ -1,0 +1,15 @@
+.error {
+  background-color: red !important;
+}
+
+.warning {
+  background-color: orange !important;
+}
+
+.good {
+  background-color: blue !important;
+}
+
+.completed {
+  background-color: green !important;
+}
